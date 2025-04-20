@@ -1,0 +1,81 @@
+Access Modifier
+
+##private
+
+#Same Class 
+
+yes
+package com.corejava.day;
+
+public class A {
+	
+	
+	private int x = 1;
+	private void test() {
+		System.out.println(2);
+	}
+	public static void main(String[] args) {
+		A a1 =  new A();
+		a1.test();
+		System.out.println(a1.x);
+	}
+	
+	
+}
+
+#same package sub class
+
+yes 
+
+package com.corejava.day;
+
+public class A {
+	
+	
+	private int x = 1;
+	private void test() {
+		System.out.println(2);
+	}
+	
+	
+}
+package com.corejava.day;
+
+import com.corejava.day.session17.A;
+
+public class B  {
+	public static void main(String[] args) {
+		
+		A b1 = new A();
+		System.out.println(b1.x);
+		b1.test();
+		
+	}
+
+}
+
+#same package non sub class
+#Different package sub class
+#Different package non sub class
+
+
+Here are your notes based on the table in the image:
+
+---
+
+### **Access Modifiers: Private vs. Default**
+| **Context**                          | **Private** | **Default** |
+|--------------------------------------|------------|------------|
+| **Same class**                        | ✅ Yes     | ✅ Yes     |
+| **Same package (subclass)**           | ❌ No      | ✅ Yes     |
+| **Same package (non-subclass)**       | ❌ No      | ✅ Yes     |
+| **Different package (subclass)**      | ❌ No      | ❌ No      |
+| **Different package (non-subclass)**  | ❌ No      | ❌ No      |
+
+### **Key Takeaways:**
+- **Private:** Accessible only within the same class.
+- **Default (package-private):** Accessible within the same package but not outside it.
+- **Neither private nor default members are accessible outside the package.**
+
+Let me know if you need further explanation! 🚀
+
